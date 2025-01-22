@@ -16,7 +16,7 @@ const lifecycles = singleSpaAngular<AppProps>({
     return bootstrapApplication(CatsAppRootComponent, appConfig);
   },
   template: '<cats-app-root />',
-  domElementGetter: () => document.getElementById('single-spa:main') as HTMLElement,
+  domElementGetter: () => document.getElementById('single-spa:cats') as HTMLElement,
   Router,
   NgZone,
   NavigationStart,

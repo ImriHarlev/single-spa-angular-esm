@@ -16,14 +16,14 @@ registerApplication(
   'cats',
   // @ts-expect-error: cannot find module
   () => import('@myorg/cats'),
-  (location) => location.pathname.startsWith('/cats') || ['', '/'].includes(location.pathname)
+  () => true
 );
 
 registerApplication(
   'dogs',
   // @ts-expect-error: cannot find module
   () => import('@myorg/dogs'),
-  (location) => location.pathname.startsWith('/dogs')
+  () => true
 );
 
 start({ urlRerouteOnly: false });
